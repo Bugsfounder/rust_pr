@@ -1,3 +1,4 @@
+use log::log;
 
 fn main() {
     let x = 5;
@@ -44,7 +45,12 @@ fn main() {
     // println!("{s2}"); // ownership has been moved to takes_and_gives_back() function, it will produce error. no reachable
     println!("{s3}");
 
-
+    let (s2, len ) = calculate_length(String::from("Hello"));
+    println!("s2 = {s2}, len = {len}");
+}
+fn calculate_length(s: String) -> (String, usize){
+     let len = s.len();
+    (s, len)
 }
 fn gives_ownership() -> String{
     let some_string = String::from("yours");
