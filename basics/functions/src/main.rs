@@ -12,19 +12,17 @@ fn main() {
 
     println!("value of y {y}");
 
-    let x = five();
+    let _x = five();
     let x = plus_one(3);
     println!("The value of x is: {x}");
-
 }
 
-fn five() -> i32{
+fn five() -> i32 {
     5
 }
 fn plus_one(x: i32) -> i32 {
-     x + 1
+    x + 1
 }
-fn another_function(x : i32, unit_label: char){
+fn another_function(x: i32, unit_label: char) {
     println!("Another function {x} {unit_label}");
 }
-
